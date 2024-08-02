@@ -8,7 +8,7 @@ setup_logging()
 save_to_json_logger = logging.getLogger("app.save_to_json")
 
 
-def save_to_json(list_dict_for_json: list[dict], file_name: str) -> None:
+def save_to_json(list_dict_for_json: list[dict], file_name: str = 'vacancies') -> None:
     '''
     Функция сохранения словаря в файл json
     :param list_dict_for_json: Список словарей.
@@ -19,6 +19,6 @@ def save_to_json(list_dict_for_json: list[dict], file_name: str) -> None:
     try:
         with open(PATH_TO_FILE, "w", encoding="utf-8") as file:
             json.dump(list_dict_for_json, file, ensure_ascii=False, indent=4)
-        save_to_json_logger.info("Файл перезаписан")
+        save_to_json_logger.info("Файл сохранен")
     except Exception as ex:
         save_to_json_logger.error(f"Произошла ошибка: {ex}")
