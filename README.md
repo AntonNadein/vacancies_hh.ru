@@ -26,4 +26,5 @@
 
 ### Тестирование
 - тесы основной функции: *[test_api_hh.py](tests%2Ftest_api_hh.py)*
+- тесы записи в файл: *[test_save_to_json.py](tests%2Ftest_save_to_json.py)*
 
