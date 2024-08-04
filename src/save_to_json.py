@@ -8,12 +8,12 @@ setup_logging()
 save_to_json_logger = logging.getLogger("app.save_to_json")
 
 
-def save_to_json(list_dict_for_json: list[dict], file_name: str = 'vacancies') -> None:
-    '''
+def save_to_json(list_dict_for_json: list[dict], file_name: str = "vacancies") -> None:
+    """
     Функция сохранения словаря в файл json
     :param list_dict_for_json: Список словарей.
     :param file_name: Имя файла в который бует совершено сохранение.
-    '''
+    """
     PATH_TO_FILE = os.path.join(os.path.dirname(__file__), "..", "data", file_name)
     save_to_json_logger.info(f"Путь до файла: {PATH_TO_FILE}")
     try:

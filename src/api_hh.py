@@ -6,19 +6,19 @@ from src.logger import setup_logging
 
 setup_logging()
 api_vacancies_logger = logging.getLogger("app.api_vacancies")
-# Словарь Город: id на hh.ru
+# Словарь Город: id на hh.ru может быть дополнен
 city_dict = {"Москва": 1, "Санкт-Петербург": 2, "Екатеринбург": 3, "Новосибирск": 4}
 
 
 def api_vacancies(search_text: str, exclude_text: str = None, city: str = None, period: int = 1) -> list[dict]:
-    '''
+    """
     Функция запроса и преобразования данных с hh.ru.
     :param search_text: str Текст поиска.
     :param exclude_text: str Текст исключения из поиска.
     :param city: str Названия города с большой буквы.
     :param period: int Количество дней для поиска.
     :return: список словарей [вакансия, зарплата, город, url].
-    '''
+    """
     list_item = []
 
     if city in city_dict:
@@ -40,6 +40,7 @@ def api_vacancies(search_text: str, exclude_text: str = None, city: str = None, 
         }
         # тело запроса
         responce = requests.get(url, params)
+        api_vacancies_logger.info(f"Выпонился {responce}")
         vacancies_data = responce.json()["items"]
         api_vacancies_logger.info("Выпонился запрос")
         # формирование отчета

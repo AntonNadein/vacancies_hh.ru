@@ -2,7 +2,7 @@ import logging
 
 
 def setup_logging():
-    '''Базовая настройка логгера для всего проекта'''
+    """Базовая настройка логгера для всего проекта"""
     (
         logging.basicConfig(
             level=logging.INFO,

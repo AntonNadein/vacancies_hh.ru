@@ -375,6 +375,16 @@ files = [
 ]
 
 [[package]]
+name = "patch"
+version = "1.16"
+description = "Library to parse and apply unified diffs"
+optional = false
+python-versions = "*"
+files = [
+    {file = "patch-1.16.zip", hash = "sha256:c62073f356cff054c8ac24496f1a3d7cfa137835c31e9af39a9f5292fd75bd9f"},
+]
+
+[[package]]
 name = "pathspec"
 version = "0.12.1"
 description = "Utility library for gitignore style pattern matching of file paths."
@@ -542,4 +552,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "7fba035b3ab2302b5d96cf2c594a6577bc8a33ece6e13c2893f5fe342f378543"
+content-hash = "3a9aa26f8c26a846d2f1964f96f74cb81c76a90ae16ffe16f143d8d25f2d41c4"
